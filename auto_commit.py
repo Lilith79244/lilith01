@@ -41,7 +41,7 @@ def check_git_status():
 def pull_latest_changes():
     """拉取最新代码"""
     print("🔄 拉取远程最新代码...")
-    success, output = run_command("git pull origin master", check=False)
+    success, output = run_command("git pull origin main", check=False)
     
     if not success:
         print("❌ 拉取代码失败")
@@ -74,7 +74,7 @@ def commit_changes(commit_message):
 def push_to_remote():
     """推送到远程仓库"""
     print("🚀 推送到远程仓库...")
-    success, output = run_command("git push origin master")
+    success, output = run_command("git push origin main")
     
     if not success:
         if "rejected" in output.lower():
@@ -84,7 +84,7 @@ def push_to_remote():
             # 尝试拉取并重新推送
             if pull_latest_changes():
                 print("🚀 重新推送到远程仓库...")
-                success, _ = run_command("git push origin master")
+                success, _ = run_command("git push origin main")
                 if success:
                     print("✅ 成功推送到远程仓库")
                     return True
