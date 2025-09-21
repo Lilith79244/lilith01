@@ -81,7 +81,7 @@ export default defineConfig({
       { text: '边塞征战', link: '/frontier/' },
       { text: '咏史怀古', link: '/history/' },
       { text: '抒情咏物', link: '/lyrical/' },
-      { text: 'GitHub', link: 'https://github.com/yangbin09/gushici-intelligent-docs' }
+      { text: 'GitHub', link: 'https://github.com/Lilith79244/lilith01.git' }
     ],
 
     // 侧边栏 - 使用自动化路径修复的 vitepress-sidebar
